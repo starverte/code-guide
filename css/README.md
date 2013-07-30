@@ -3,7 +3,6 @@
 ## CSS syntax
 
 * Use soft-tabs with two spaces
-* When grouping selectors, keep individual selectors to a single line
 * Include one space before the opening brace of declaration blocks
 * Place closing braces of declaration blocks on a new line
 * Include one space after <code>:</code> in each property
