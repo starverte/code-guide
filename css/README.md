@@ -44,41 +44,53 @@ Questions on the terms used here? See the [syntax section of the Cascading Style
 
 ## Declaration order
 
-Related declarations should be grouped together, placing positioning and box-model properties closest to the top, followed by typographic and visual properties.
-
-````css
-.declaration-order {
-  /* Positioning */
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100;
-
-  /* Box-model */
-  display: block;
-  float: right;
-  width: 100px;
-  height: 100px;
-
-  /* Typography */
-  font: normal 13px "Helvetica Neue", sans-serif;
-  line-height: 1.5;
-  color: #333;
-  text-align: center;
-
-  /* Visual */
-  background-color: #f5f5f5;
-  border: 1px solid #e5e5e5;
-  border-radius: 3px;
-
-  /* Misc */
-  opacity: 1;
-}
-````
-
-For a complete list of properties and their order, please see [Recess](http://twitter.github.com/recess).
+Related declarations should be grouped together in the following order:
+- Display properties
+ - `background`, `background-*`
+ - `border`, `border-color`, `border-style`, `border-width`, `border-radius`
+ - `border-top`,`border-top-*`, `border-top-*-*`
+ - `border-right`,`border-right-*`
+ - `border-bottom`,`border-bottom-*`, `border-bottom-*-*`
+ - `border-image`, `border-image-*`
+ - `border-collapse`, `border-spacing`, `empty-cells`, `table-layout`, `columns`, `column-*`
+ - `box-shadow`
+ - `outline`, `outline-color`, `outline-style`, `outline-width`
+- Positioning properties
+ - `position`, `top`, `right`, `bottom`, `left`
+ - `clear`
+ - `clip`, `visibility`, `z-index`
+ - `margin`, `margin-*`, `padding`, `padding-*`
+ - `caption-side`
+- Box-model properties
+ - `display`, `float`
+ - `min-width`, `min-height`
+ - `width`, `height`
+ - `max-width`, `max-height`
+ - `overflow`, `overflow-*`, `white-space`, `hanging-punctuation`, `punctuation-trim`
+ - `rotation`, `rotation-point`
+ - `box-*` (except `box-shadow`)
+- Typography properties
+ - `font`, `font-*`, `font-size-adjust`
+ - `color`
+ - `line-height`, `direction`, `letter-spacing`, `word-spacing`
+ - `text-align`, `text-align-last`, `text-decoration`, `text-indent`, `text-transform`
+ - `text-justify`, `text-outline`, `text-overflow`, `text-shadow`, `text-wrap`, `vertical-align`
+ - `word-break`, `word-wrap`
+ - `list-style`, `list-style-*`
+- Other properties (not an exhaustive list)
+ - `appearance`
+ - `animation`
+ - `box-flex`
+ - `content`
+ - `cursor`
+ - `fit`
+ - `hyphens`
+ - `line-stacking`
+ - `marquee-direction`
+ - `opacity`
+ - `orphans`
+ - `transform`
+ - `transition`
 
 
 ## Formatting exceptions
