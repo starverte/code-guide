@@ -57,10 +57,11 @@ Strive to maintain HTML standards and semantics, but don't sacrifice pragmatism.
 
 HTML attributes should come in this particular order for easier reading of code.
 
-* class
-* id
-* data-*
-* for|type|href
+* `class`
+* `id`
+* `data-*`
+* `for`, `type`, `href`
+* Other attributes in alphabetical order
 
 Such that your markup looks like:
 
