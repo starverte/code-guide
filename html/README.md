@@ -5,8 +5,12 @@
 
 * Use soft-tabs with two spaces
 * Nested elements should be indented once (2 spaces)
+* Opening and closing tags should line up vertically unless on a single line
+* If there is only one nested element, consider placing the parent and nested element on the same line
 * Always use double quotes, never single quotes
 * Don't include a trailing slash in self-closing elements
+* Except for `!DOCTYPE`, tags and attributes should be lowercase
+* Attribute values may be title case or sentence case
 
 **Incorrect example:**
 
@@ -28,9 +32,7 @@
 ````html
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Page title</title>
-  </head>
+  <head><title>Page title</title></head>
   <body>
     <img src="images/company-logo.png" alt="Company">
     <h1 class="hello-world">Hello, world!</h1>
@@ -38,6 +40,45 @@
 </html>
 ````
 
+### Nesting elements
+
+If nesting an element within a nested element, place a hard return between each nested element.
+Place a comment in the form `<!-- .class -->` or `<!-- #id -->` right after the closing tag of the parent element.
+See below:
+
+````html
+<!DOCTYPE html>
+<html>
+  <head><title>Page title</title></head>
+  <body>
+    <div class="container">
+    
+      <div class="row">
+      <!-- A hard return normally wouldn't go here, but one is required to balance out the one after .align-left -->
+        <h1>Title</h1><!-- Note that nested elements without nested elements within them do not have a hard return -->
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <!-- A hard return normally wouldn't go here, but is required because the following element has nested elements-->
+        <div class="align-left">
+          <img src="images/company-logo.png" alt="Company">
+          <caption>Hello, world!</caption>
+        </div><!-- .align-left -->
+        <!-- A hard return normally wouldn't go here, but is required because the preceding element has nested elements-->
+      </div><!-- .row -->
+      
+      <div class="row">
+        <h1>Title</h1>
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+      </div><!-- .row -->
+      
+    </div><!-- .container -->
+  </body>
+</html>
+````
+
+Additional hard returns between elements that aren't nested is unnecessary, but accepted. Use sparingly, however, they can be useful when reading the code.
 
 ## HTML5 doctype
 
