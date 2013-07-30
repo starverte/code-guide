@@ -86,19 +86,19 @@ Avoid using the `style` attribute when possible, using `class` or `id` instead. 
  - If an element has multiple classes, order alphabetically
  - Classes and IDs are _optional_, don't use unless they are useful
 
-Incorrect:
-```
+**Incorrect example:**
+````html
 <h1 class="sctn_ttl ct" id="1topic">Do not do this</h1>
 <p class="paragraph" id="1topic"> ... </p>
 <p class="paragraph" id="2nd_paragraph"> ... </p>
-```
+````
 
-Correct:
-```
+**Correct example:**
+````html
 <h1 class="content section-title" id="do-this">Do this</h1>
 <p> ... </p>
 <p class="second"> ... </p>
-```
+````
 
 ## JavaScript generated markup
 
