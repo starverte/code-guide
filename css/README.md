@@ -72,6 +72,7 @@ Related declarations should be grouped together in the following order:
 - Typography properties
  - `font`, `font-*`, `font-size-adjust`
  - `color`
+ - `content`
  - `line-height`, `direction`, `letter-spacing`, `word-spacing`
  - `text-align`, `text-align-last`, `text-decoration`, `text-indent`, `text-transform`
  - `text-justify`, `text-outline`, `text-overflow`, `text-shadow`, `text-wrap`, `vertical-align`
@@ -80,8 +81,6 @@ Related declarations should be grouped together in the following order:
 - Other properties (not an exhaustive list)
  - `appearance`
  - `animation`
- - `box-flex`
- - `content`
  - `cursor`
  - `fit`
  - `hyphens`
