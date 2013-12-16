@@ -88,6 +88,7 @@ Related declarations should be grouped together in the following order:
  - `marquee-direction`
  - `opacity`
  - `orphans`
+ - `speak`
  - `transform`
  - `transition`
 
